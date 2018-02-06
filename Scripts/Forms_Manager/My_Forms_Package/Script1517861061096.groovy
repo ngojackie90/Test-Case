@@ -61,7 +61,7 @@ WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Add_Forms_Btn'))
 
 not_run: WebUI.waitForPageLoad(0)
 
-WebUI.waitForElementPresent(findTestObject('Forms_Manager/Page_rDocs/F21_Displaying_In_My_Forms_Package'), 2)
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/My_Forms_Package/F21_Displaying_In_My_Forms_Package'), 2)
 
 not_run: WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Edit_Package_Name_Icon'))
 

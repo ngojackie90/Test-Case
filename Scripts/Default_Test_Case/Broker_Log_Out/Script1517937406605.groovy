@@ -19,10 +19,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+
 'Click dropdown select'
 WebUI.click(findTestObject('DropDown/DropDown_Button/a_Select'), FailureHandling.STOP_ON_FAILURE)
 
 'Logout'
+WebUI.waitForElementClickable(findTestObject('DropDown/DropDown_Action/a_Logout'), 0)
+
 WebUI.click(findTestObject('DropDown/DropDown_Action/a_Logout'))
 
 not_run: WebUI.closeBrowser()

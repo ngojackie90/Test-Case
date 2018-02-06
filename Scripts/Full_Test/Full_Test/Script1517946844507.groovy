@@ -19,29 +19,29 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.callTestCase(findTestCase('Forms_Manager/Forms_Library'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Log_Out'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('Forms_Manager/Forms_Template'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Log_Out'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('Forms_Manager/Add_Edit_Clause'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Log_Out'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Log_Out'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('Forms_Manager/My_Forms_Package'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Log_Out'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('Forms_Manager/Broker_Forms_Package'), [:], FailureHandling.STOP_ON_FAILURE)
 

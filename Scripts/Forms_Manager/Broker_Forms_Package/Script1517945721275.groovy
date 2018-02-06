@@ -27,11 +27,3 @@ WebUI.click(findTestObject('DropDown/DropDown_Action/a_Forms Manager'))
 
 WebUI.click(findTestObject('Forms_Manager/Forms_Library_Tab/Forms_Package_Tab'))
 
-WebUI.acceptAlert()
-
-WebUI.acceptAlert()
-
-WebUI.acceptAlert()
-
-WebUI.acceptAlert()
-
