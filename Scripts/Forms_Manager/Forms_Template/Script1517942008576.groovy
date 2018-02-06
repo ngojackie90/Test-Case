@@ -18,47 +18,34 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-'Login'
 WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click dropdown select'
 WebUI.click(findTestObject('DropDown/DropDown_Button/a_Select'), FailureHandling.STOP_ON_FAILURE)
 
-'Select Forms Manager'
 WebUI.click(findTestObject('DropDown/DropDown_Action/a_Forms Manager'))
 
-'Click Clauses Tab'
-WebUI.click(findTestObject('Forms_Manager/Forms_Library_Tab/Clauses_Tab'))
+WebUI.click(findTestObject('Forms_Manager/Forms_Library_Tab/Forms_Template_Tab'))
 
-'Click Add Clause'
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Add_Clause_Button'), FailureHandling.STOP_ON_FAILURE)
+WebUI.waitForElementNotPresent(findTestObject('Forms_Manager/Forms_Template/Processing_Modal'), 10)
 
-'Wait For Clause Modal'
-WebUI.waitForElementVisible(findTestObject('Forms_Manager/Clause_Page/Clause_Modal'), 30)
+WebUI.click(findTestObject('Forms_Manager/Forms_Template/i_icon-plus icon-white'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Title_Field'))
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/Forms_Template/Library_List_Modal'), 15)
 
-'Input A Title'
-WebUI.sendKeys(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Title_Field'), 'QA Automate Clause Test')
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/Forms_Template/Datasheet_Under_List'), 5)
 
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Body_Field'))
+WebUI.click(findTestObject('Forms_Manager/Forms_Template/Datasheet_CheckBox'))
 
-'Input A Body'
-WebUI.sendKeys(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Body_Field'), 'Test')
+WebUI.click(findTestObject('Forms_Manager/Forms_Template/Add_Form_Template_Btn'))
 
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Submit_Clause_Button'))
+WebUI.waitForElementNotPresent(findTestObject('Forms_Manager/Forms_Template/Processing_Modal'), 10)
 
-WebUI.waitForElementPresent(findTestObject('Forms_Manager/Clause_Page/td_QA Automate Clause Test'), 0)
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/Forms_Template/Page_rDocs (1)/iframe_MainContent_PdfWebContr'), 
+    5)
 
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Select_Clause_Clause_Page'))
+WebUI.click(findTestObject('Forms_Manager/Forms_Template/Page_rDocs/Datasheet_CheckBox_Forms_Template_Page'))
 
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Clause_Page_Remove_Btn'))
-
-WebUI.waitForElementVisible(findTestObject('Forms_Manager/Clause_Page/Remove_Clause_Modal'), 0)
-
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Remove_Clause_Modal_To_Confirm_To_Remove_Btn'))
-
-not_run: WebUI.closeBrowser()
+WebUI.click(findTestObject('Forms_Manager/Forms_Template/Delete_Form_Btn'))
 
