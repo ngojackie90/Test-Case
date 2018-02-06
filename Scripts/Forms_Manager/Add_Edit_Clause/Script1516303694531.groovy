@@ -50,5 +50,15 @@ WebUI.sendKeys(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Body_Field'
 
 WebUI.click(findTestObject('Forms_Manager/Clause_Page/Submit_Clause_Button'))
 
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/Clause_Page/Page_rDocs/td_QA Automate Clause Test'), 0)
+
+WebUI.click(findTestObject('Forms_Manager/Clause_Page/Page_rDocs/Select_Clause_Clause_Page'))
+
+WebUI.click(findTestObject('Forms_Manager/Clause_Page/Page_rDocs/Clause_Page_Remove_Btn'))
+
+WebUI.waitForElementVisible(findTestObject('Forms_Manager/Clause_Page/Page_rDocs/Remove_Clause_Modal'), 0)
+
+WebUI.click(findTestObject('Forms_Manager/Clause_Page/Page_rDocs/Remove_Clause_Modal_To_Confirm_To_Remove_Btn'))
+
 not_run: WebUI.closeBrowser()
 

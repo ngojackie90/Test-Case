@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('abcrealty.stage.myrdocs.com')
 
-WebUI.setText(findTestObject('Login Page/Login Page/input_txtUserName'), 'stage.companybroker')
+WebUI.setText(findTestObject('Login Page/Login Page/input_txtUserName'), 'broker.automation')
 
 WebUI.setText(findTestObject('Login Page/Login Page/input_txtPassword'), 'aaaa')
 
