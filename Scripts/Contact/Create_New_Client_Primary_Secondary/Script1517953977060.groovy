@@ -87,3 +87,5 @@ WebUI.click(findTestObject('Dashboard/Contact/Add_Contact_Modal/Add_Contact_Subm
 
 not_run: WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Log_Out'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.closeBrowser()
+
