@@ -18,37 +18,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-
-'Login'
-WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click dropdown select'
 WebUI.click(findTestObject('DropDown/DropDown_Button/a_Select'), FailureHandling.STOP_ON_FAILURE)
 
-'Select Forms Manager'
-WebUI.click(findTestObject('DropDown/DropDown_Action/a_Forms Manager'))
-
-'Click Clauses Tab'
-WebUI.click(findTestObject('Forms_Manager/Forms_Library_Tab/Clauses_Tab'))
-
-'Click Add Clause'
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Add_Clause_Button'), FailureHandling.STOP_ON_FAILURE)
-
-'Wait For Clause Modal'
-WebUI.waitForElementVisible(findTestObject('Forms_Manager/Clause_Page/Clause_Modal'), 30)
-
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Title_Field'))
-
-'Input A Title'
-WebUI.sendKeys(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Title_Field'), 'QA Automate Clause Test')
-
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Body_Field'))
-
-'Input A Body'
-WebUI.sendKeys(findTestObject('Forms_Manager/Clause_Page/Clause_Name_Body_Field'), 'Test')
-
-WebUI.click(findTestObject('Forms_Manager/Clause_Page/Submit_Clause_Button'))
+'Logout'
+WebUI.click(findTestObject('DropDown/DropDown_Action/a_Logout'))
 
 not_run: WebUI.closeBrowser()
 

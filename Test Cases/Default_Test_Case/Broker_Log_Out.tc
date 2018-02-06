@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>BrokerLogin</name>
+   <name>Broker_Log_Out</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>17e4b651-2dd2-4ca0-acc8-316edb59a479</testCaseGuid>
+   <testCaseGuid>1c45503c-d59e-40aa-8e6f-92d6b83b1217</testCaseGuid>
 </TestCaseEntity>

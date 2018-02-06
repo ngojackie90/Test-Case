@@ -19,7 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('BrokerLogin'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Click dropdown select'
 WebUI.click(findTestObject('DropDown/DropDown_Button/a_Select'), FailureHandling.STOP_ON_FAILURE)
@@ -31,7 +31,7 @@ WebUI.click(findTestObject('Forms_Manager/Forms_Library_Tab/My_Forms_Package_Tab
 
 WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Add_Package_Icon'))
 
-WebUI.waitForElementVisible(findTestObject('Forms_Manager/My_Forms_Package/Add_Package_Modal'), 30)
+WebUI.waitForElementVisible(findTestObject('Forms_Manager/My_Forms_Package/Add_Package_Modal'), 5)
 
 WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Add_Package_Package_Name_Field'))
 
@@ -43,7 +43,7 @@ WebUI.waitForPageLoad(10)
 
 WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Add_Library_Forms_Icon'))
 
-WebUI.waitForElementVisible(findTestObject('Forms_Manager/My_Forms_Package/Add_Forms_To_Package_Modal'), 30)
+WebUI.waitForElementVisible(findTestObject('Forms_Manager/My_Forms_Package/Add_Forms_To_Package_Modal'), 5)
 
 WebUI.sendKeys(findTestObject('Forms_Manager/My_Forms_Package/Add_Forms_To_Package_Search_Field'), 'f21')
 
@@ -53,21 +53,43 @@ WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Select_First_Form_Fro
 
 WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Arrow_Add_To_Selected_Forms'))
 
+not_run: WebUI.waitForPageLoad(0)
+
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/My_Forms_Package/F21_Selected_Forms'), 2)
+
+WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Add_Forms_Btn'))
+
+not_run: WebUI.waitForPageLoad(0)
+
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/Page_rDocs/F21_Displaying_In_My_Forms_Package'), 2)
+
+not_run: WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Edit_Package_Name_Icon'))
+
+not_run: WebUI.waitForElementPresent(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Name_Modal'), 0)
+
+not_run: WebUI.doubleClick(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Package_Name_Field'))
+
+not_run: WebUI.setText(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Package_Name_Field'), '123')
+
+not_run: WebUI.waitForElementPresent(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Modal'), 5)
+
+not_run: WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Field'))
+
+not_run: WebUI.sendKeys(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Field'), 'test')
+
+not_run: WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Btn'))
+
+not_run: WebUI.waitForPageLoad(5)
+
+WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Select_First_Form_In_My_Forms_Package_List'))
+
+WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Remove_Forms_In_My_Forms_Package'))
+
+WebUI.waitForElementPresent(findTestObject('Forms_Manager/My_Forms_Package/Remove_Forms_From_Package_Modal'), 0)
+
+WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Delete_Btn'))
+
 WebUI.waitForPageLoad(0)
 
-WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Submit_To_Add_Form_To_Package'))
-
-WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Edit_Package_Form_Name_Icon'))
-
-WebUI.waitForElementVisible(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Modal'), 30)
-
-WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Field'))
-
-WebUI.sendKeys(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Field'), 'Update Form Name')
-
-WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Update_Package_Form_Name_Btn'))
-
-WebUI.acceptAlert()
-
-WebUI.acceptAlert()
+WebUI.click(findTestObject('Forms_Manager/My_Forms_Package/Inactive_Package_Icon'))
 
