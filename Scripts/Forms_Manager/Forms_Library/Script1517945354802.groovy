@@ -21,31 +21,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Default_Test_Case/Broker_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'Click dropdown select'
-WebUI.click(findTestObject('DropDown/DropDown_Button/a_Select'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('DropDown/DropDown_Button/a_Select'))
 
 WebUI.click(findTestObject('DropDown/DropDown_Action/a_Forms Manager'))
 
-WebUI.click(findTestObject('Forms_Manager/Forms_Library_Tab/Forms_Template_Tab'))
+WebUI.click(findTestObject('Forms_Manager/Forms_Library/a_Georgia Association License'))
 
-WebUI.waitForElementNotPresent(findTestObject('Forms_Manager/Forms_Template/Processing_Modal'), 10)
-
-WebUI.click(findTestObject('Forms_Manager/Forms_Template/i_icon-plus icon-white'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForElementPresent(findTestObject('Forms_Manager/Forms_Template/Library_List_Modal'), 15)
-
-WebUI.waitForElementPresent(findTestObject('Forms_Manager/Forms_Template/Datasheet_Under_List'), 5)
-
-WebUI.click(findTestObject('Forms_Manager/Forms_Template/Datasheet_CheckBox'))
-
-WebUI.click(findTestObject('Forms_Manager/Forms_Template/Add_Form_Template_Btn'))
-
-WebUI.waitForElementNotPresent(findTestObject('Forms_Manager/Forms_Template/Processing_Modal'), 10)
-
-WebUI.waitForElementPresent(findTestObject('Forms_Manager/Forms_Template/iframe_MainContent_PdfWebContr'), 
-    5)
-
-WebUI.click(findTestObject('Forms_Manager/Forms_Template/Datasheet_CheckBox_Forms_Template_Page'))
-
-WebUI.click(findTestObject('Forms_Manager/Forms_Template/Delete_Form_Btn'))
+WebUI.click(findTestObject('Forms_Manager/Forms_Library/Forms_Library_Download_Icon'))
 
